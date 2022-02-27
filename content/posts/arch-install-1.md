@@ -56,7 +56,7 @@ iwctl device list
 ``` Bash
 iwctl station wlan0 scan
 ```
-Чтобы вывести список доступный сетей(точек):
+Чтобы вывести список доступных сетей(точек):
 ``` Bash
 iwctl station wlan0 get-networks
 ```
@@ -129,7 +129,7 @@ mkfs.fat -F32 /dev/sda1
 ```Bash
 mkfs.btrfs -f /dev/sda2
 ```
-Теперь монтируем второй раздей для создание подразделов:
+Теперь монтируем второй раздел для создание подразделов:
 ```Bash
 mount /dev/sda2 /mnt
 ```
@@ -160,7 +160,7 @@ btrfs su cr /mnt/@tmp
 btrfs su li /mnt
 ```
  {{< image src="/img/gallery/guide/12.png" alt="ArchLinux Download" position="center" style="border-radius: 8px;" >}}
-Теперь отмонтируеим диск:
+Теперь отмонтируем диск:
 ```Bash
 umount /mnt
 ```
@@ -270,7 +270,7 @@ pacman -S networkmanager
 ```Bash
 systemctl enable NetworkManager
 ```
-Задададим пароль на рут:
+Зададим пароль на рут:
 ```Bash
 passwd
 ```
@@ -304,7 +304,7 @@ exit
 reboot
 ```
 #### Создание пользователя
-Захдим под root и создаем пользователя:
+Заходим под root и создаем пользователя:
 ```Bash
 useradd -m -g users -G audio,video,network,wheel,storage,rfkill -s /bin/zsh th3_fox
 ```
