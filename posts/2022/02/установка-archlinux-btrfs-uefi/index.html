@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://th3fox.xyz/posts/2022/02/%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-archlinux-btrfs-uefi/"><meta property="og:image" content="https://th3fox.xyz/"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2022-02-27T00:00:00+00:00">
 <meta property="article:modified_time" content="2022-02-27T00:00:00+00:00">
-<meta property="og:see_also" content="https://th3fox.xyz/posts/2022/02/%D0%B7%D0%BD%D0%B0%D0%BA%D0%BE%D1%81%D1%82%D0%B2%D0%BE-%D1%81-archlinux/">
+<meta property="og:see_also" content="https://th3fox.xyz/posts/2022/02/%D0%B7%D0%BD%D0%B0%D0%BA%D0%BE%D0%BC%D1%81%D1%82%D0%B2%D0%BE-%D1%81-archlinux/">
 <meta property="article:section" content="ArchLinux">
 <meta property="article:published_time" content="2022-02-27 00:00:00 +0000 UTC">
 </head>
@@ -115,7 +115,7 @@
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Bash data-lang=Bash>iwctl device list
 </code></pre></div><p>Чтобы просканировать сеть, где <code>wlan0</code> - имя вашего устройства:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Bash data-lang=Bash>iwctl station wlan0 scan
-</code></pre></div><p>Чтобы вывести список доступный сетей(точек):</p>
+</code></pre></div><p>Чтобы вывести список доступных сетей(точек):</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Bash data-lang=Bash>iwctl station wlan0 get-networks
 </code></pre></div><p>Подключение к вашей точке доступа:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Bash data-lang=Bash>iwctl station wlan0 connect <span style=color:#e6db74>&#34;Имя вашей точки&#34;</span> 
@@ -172,7 +172,7 @@
 <li>Форматируем тот раздел, которому мы выделили все оставшееся место:</li>
 </ol>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Bash data-lang=Bash>mkfs.btrfs -f /dev/sda2
-</code></pre></div><p>Теперь монтируем второй раздей для создание подразделов:</p>
+</code></pre></div><p>Теперь монтируем второй раздел для создание подразделов:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Bash data-lang=Bash>mount /dev/sda2 /mnt
 </code></pre></div><p>Приступим к созданию подразделов:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Bash data-lang=Bash>btrfs su cr /mnt/@
@@ -186,7 +186,7 @@
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Bash data-lang=Bash>btrfs su li /mnt
 </code></pre></div><p>
 <img src=https://th3fox.xyz/img/gallery/guide/12.png alt="ArchLinux Download" class=center style=border-radius:8px>
-Теперь отмонтируеим диск:</p>
+Теперь отмонтируем диск:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Bash data-lang=Bash>umount /mnt
 </code></pre></div><p>Теперь создадим папки для монтирования подразделов:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Bash data-lang=Bash>mkdir -p /mnt/<span style=color:#f92672>{</span>boot,home,root,srv,var/log,var/cache,tmp<span style=color:#f92672>}</span>
@@ -248,7 +248,7 @@ FONT=cyr-sun16</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Bash data-lang=Bash>pacman -S networkmanager
 </code></pre></div><p>И включим его:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Bash data-lang=Bash>systemctl enable NetworkManager
-</code></pre></div><p>Задададим пароль на рут:</p>
+</code></pre></div><p>Зададим пароль на рут:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Bash data-lang=Bash>passwd
 </code></pre></div><p>Далее вводим пароль.
 Установим загрузчик:</p>
@@ -276,7 +276,7 @@ options  root=/dev/sda2 rootflags=subvol=@ rw quiet</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Bash data-lang=Bash>exit  
 reboot
 </code></pre></div><h4 id=создание-пользователя>Создание пользователя</h4>
-<p>Захдим под root и создаем пользователя:</p>
+<p>Заходим под root и создаем пользователя:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Bash data-lang=Bash>useradd -m -g users -G audio,video,network,wheel,storage,rfkill -s /bin/zsh th3_fox
 </code></pre></div><blockquote>
 <p><strong>th3_fox - меняете на свое имя пользователя</strong></p>
@@ -376,9 +376,9 @@ reboot
 <div class=pagination>
 <div class=pagination__buttons>
 <span class="button previous">
-<a href=https://th3fox.xyz/posts/2022/02/%D0%B7%D0%BD%D0%B0%D0%BA%D0%BE%D1%81%D1%82%D0%B2%D0%BE-%D1%81-archlinux/>
+<a href=https://th3fox.xyz/posts/2022/02/%D0%B7%D0%BD%D0%B0%D0%BA%D0%BE%D0%BC%D1%81%D1%82%D0%B2%D0%BE-%D1%81-archlinux/>
 <span class=button__icon>←</span>
-<span class=button__text>Знакоство с ArchLinux</span>
+<span class=button__text>Знакомство с ArchLinux</span>
 </a>
 </span>
 </div>
