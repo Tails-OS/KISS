@@ -3,7 +3,7 @@ title   = "KISS"
 languageCode = "ru-ru"
 theme = "hello-friend-ng"
 defaultContentLanguage = "ru"
-
+data-theme= "dark"
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
 
@@ -159,25 +159,15 @@ disableHugoGeneratorInject = false
      maxWidth = "350px"
 
   # Social icons
-  [[params.social]]
-    name = "twitter"
-    url  = "https://twitter.com/"
 
   [[params.social]]
     name = "email"
-    url  = "mailto:nobody@example.com"
+    url  = "mailto:tails@foxmail.net.ru"
 
   [[params.social]]
     name = "github"
-    url  = "https://github.com/"
+    url  = "https://github.com/tails-os"
 
-  [[params.social]]
-    name = "linkedin"
-    url  = "https://www.linkedin.com/"
-
-  [[params.social]]
-    name = "stackoverflow"
-    url  = "https://www.stackoverflow.com/"
 
 [languages]
   [languages.ru]
