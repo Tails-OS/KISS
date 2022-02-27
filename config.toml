@@ -1,4 +1,4 @@
-baseURL = "https://th3fox.xyz"
+baseURL = "https://tails-os.github.io/KISS/"
 title   = "KISS"
 languageCode = "ru-ru"
 theme = "hello-friend-ng"
