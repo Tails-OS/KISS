@@ -1,0 +1,386 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on KISS</title><link>https://th3fox.xyz/posts/</link><description>Recent content in Posts on KISS</description><generator>Hugo -- gohugo.io</generator><language>ru-ru</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Sun, 27 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://th3fox.xyz/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Знакоство с ArchLinux</title><link>https://th3fox.xyz/posts/2022/02/%D0%B7%D0%BD%D0%B0%D0%BA%D0%BE%D1%81%D1%82%D0%B2%D0%BE-%D1%81-archlinux/</link><pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate><guid>https://th3fox.xyz/posts/2022/02/%D0%B7%D0%BD%D0%B0%D0%BA%D0%BE%D1%81%D1%82%D0%B2%D0%BE-%D1%81-archlinux/</guid><description>Введение Arch Linux — независимый дистрибутив GNU/Linux для опытных пользователей, оптимизированный для архитектуры x86-64, который стремится предоставить последние «новейшие» версии программ, следуя модели rolling release. По умолчанию пользователю предоставляется минималистичная базовая система, в которую пользователь может добавить то, что ему требуется. Для установки, удаления и обновления пакетов используется пакетный менеджер Pacman.
+У Arch Linux есть обширный раздел документации в поддомене ArchWiki, основанный на MediaWiki, который поддерживается разработчиками и сообществом. Документация переведена на десятки языков, однако основным является английский.</description><content type="html"><![CDATA[<h2 id="введение">Введение</h2>
+<p>Arch Linux — независимый дистрибутив GNU/Linux для опытных пользователей, оптимизированный для архитектуры x86-64, который стремится предоставить последние «новейшие» версии программ, следуя модели rolling release. По умолчанию пользователю предоставляется минималистичная базовая система, в которую пользователь может добавить то, что ему требуется. Для установки, удаления и обновления пакетов используется пакетный менеджер Pacman.</p>
+<p>У Arch Linux есть обширный раздел документации в поддомене ArchWiki, основанный на MediaWiki, который поддерживается разработчиками и сообществом. Документация переведена на десятки языков, однако основным является английский. В документации также можно найти официальное руководство по установке.</p>
+<p>Благодаря наличию обширной документации и отсутствию графического установщика, Arch представляет большой академический интерес для тех, кто хочет освоить GNU/Linux.</p>
+<p>Arch Linux является независимым дистрибутивом, разработанным с нуля. Создатель дистрибутива Джадд Винет вдохновлялся CRUX, но мнение о том, что Arch основан на CRUX, ошибочно. На Arch основаны такие дистрибутивы, как Antergos, Parabola GNU, ArchBang, Arch Hurd, Chakra, ConnochaetOS, Manjaro и другие.</p>
+<h2 id="основные-особенности-arch">Основные особенности Arch</h2>
+<p>Философия Arch Linux базируется на нескольких основных принципах:</p>
+<ul>
+<li><strong>Простота</strong></li>
+<li><strong>Современность</strong></li>
+<li><strong>Прагматизм</strong></li>
+<li>Нацеленность на <strong>определенных</strong> пользователей (<strong>user-centric, а не user-friendly</strong>)</li>
+<li><strong>Гибкость</strong></li>
+</ul>
+<p>Так разработчики описывают основные особенности и принципы, на которых базируется Arch:</p>
+<ul>
+<li>
+<p>Простота. (Заметим, что под простотой подразумевается не простота использования ОС, а простота её внутренней организации: минимализм, лаконичность, следование принципам KISS и Unix-way.)</p>
+</li>
+<li>
+<p>Рассчитана не на новичков, а на более опытных пользователей.</p>
+</li>
+<li>
+<p>Джадд Винет основал этот дистрибутив, руководствуясь своим видением идеального дистрибутива, и желая вернуть хоть что-то сообществу свободного программного обеспечения, после того, как столько заимствовал из него.</p>
+</li>
+<li>
+<p>Цель — сделать Arch совершенной основой. Основой, не включающей в себя причудливых утилит и автонастроек, но с утилитами для ручной настройки и некоторыми функциями для пользователей, чтобы они могли продолжить дальнейшую разработку сами.</p>
+</li>
+<li>
+<p>«Вернуть хоть что-то сообществу свободного программного обеспечения» — это свободный дар. Когда вы получаете подарок от кого-либо, это обычно подразумевает, что вам придется что-либо отдать взамен. Так что идеи, предложения, утилиты от пользователей приветствуются.</p>
+</li>
+<li>
+<p>Есть две стороны Arch Linux: сторона разработчика и сторона пользователя. Не надейтесь объединить обе стороны, но создайте между ними взаимную связь, тогда каждый может получить то, что он хочет добавить к своей системе.</p>
+</li>
+<li>
+<p>Не позволяйте утилитам настройки или GUI управлять системой, она должна управляться пользователем. Нет ничего плохого в GUI до тех пор, пока графический интерфейс соответствует этим принципам.</p>
+</li>
+<li>
+<p>Не будьте зависимы от того, что предлагают утилиты. Когда вы пишете или выбираете инструмент, он должен быть написан на читаемом языке программирования (KISS), чтобы позволить пользователям изменить его, если они захотят.</p>
+</li>
+<li>
+<p>Ядро разработки Arch Linux не будет представлено какими-либо «дружественными» GUI/утилитами в ближайшем будущем.</p>
+</li>
+<li>
+<p>Arch будет тем, что вы из него сделаете.</p>
+</li>
+<li>
+<p>Слово «проще» в Arch рассматривается по-другому нежели в других дистрибутивах. Чтобы легко чего-либо достичь, нужно учиться.</p>
+</li>
+<li>
+<p>Надежда на графический интерфейс для настройки/использования системы в конце концов принесёт пользователю только проблемы. В какой-то момент времени пользователь почувствует, что ему нужно знать, что скрывает графический интерфейс.</p>
+</li>
+<li>
+<p>Попытки скрыть сложность системы и сделать её проще за счёт графических утилит и автоматизации рутинных задач обычно приводят к ещё более сложной системе. Вместо этого лучше сделать её более простой и логичной изнутри, разумеется, учитывая ваши задачи, взгляды и предпочтения.</p>
+</li>
+<li>
+<p>Рано или поздно вам потребуется искать информацию в Интернете или в Usenet (если страницы man окажется недостаточно). Уметь искать в сети — это первое, чему должен научиться начинающий пользователь.</p>
+</li>
+<li>
+<p>В то время как пользователи говорят, что такой-то дистрибутив не похож на какой-то другой, Arch позволяет пользователю вносить желаемый вклад до тех пор, пока это не противоречит принципам и философии Arch.</p>
+</li>
+<li>
+<p>Основное свойство возможности сделать свой вклад заключается в том, что вам не нужно разрешение, чтобы его сделать. Никто не может остановить вас при написании того, что вы лично находите полезным, даже если «силы, которые существуют» не считают это благодеянием. Напишите это и поместите в User Contributions форум. Если людям это понравится, вы получите ответ. Даже если предположить, что все вокруг это не оценят, разве вас это будет волновать, если для вас польза очевидна?</p>
+</li>
+<li>
+<p>Не надо требовать от разработчиков утилит и документации. Попытайтесь понять цель и философию Arch — это то, что отличает Arch от других.</p>
+</li>
+<li>
+<p>Единственный бинарный дистрибутив, где собрано все так, как задумали разработчики без каких-либо изменений в исходном коде. По этой причине и появился миф о стабильности Arch Linux.</p>
+</li>
+</ul>
+<h2 id="почему-стоит-попробовать-archlinux">Почему стоит попробовать ArchLinux</h2>
+<h4 id="1-с-arch-linux-вы-можете-создать-свой-собственный-компьютер">1. С Arch Linux вы можете создать свой собственный компьютер</h4>
+<p>Arch Linux является уникальным среди наиболее популярных дистрибутивов Linux. Ubuntu и Fedora, к примеру, похожи на Windows и macOS, тем, что из коробки готовы к работе. В противоположность этому, Arch Linux ставит перед вами задачу создать операционную систему для вашего ПК самостоятельно.</p>
+<p>Раньше Arch Linux был очень сложным в установке. Фактически, старый процесс установки Arch Linux можно было использовать для того, чтобы отогнать любопытных потенциальных пользователей. Но теперь это не так, благодаря установщикам с графическим интерфейсом, таким как Anarchy и встроенный в систему с 2021 года скрипт установки.
+<code>Но рекомендуется устанавливать систему своими руками, а не при помощи скриптов, так как это даст более точно настроить систему под себя, это не противоречит принципу ArchWay и даст понимание о том, как она работает.</code></p>
+<p>Сейчас Arch Linux намного проще установить, чем раньше. Это сводит на нет одну из причин, по которой не стоило устанавливать его.</p>
+<p>В конце концов, вы остаетесь с системой, которая делает именно то, что вы хотите. И даже если вы установите дистрибутив на основе Arch, который обеспечивает работу всех компонентов из коробки, вы все равно можете поменять части по своему усмотрению.</p>
+<h4 id="2-вы-запускаете-только-то-что-вам-нужно">2. Вы запускаете только то, что вам нужно</h4>
+<p>Поскольку Arch позволяет вам выбирать ваши собственные компоненты, это означает, что вы не обременены кучей программного обеспечения, которым вы не намерены пользоваться. Ubuntu не только поставляется с большим количеством предустановленных настольных приложений, но также имеет довольно много фоновых сервисов.</p>
+<p>Несмотря на то, что это число мало по сравнению с тем, сколько работает в фоновом режиме в Windows, скорее всего, вы не знаете, что там происходит.</p>
+<p>Эти службы не только не работают в Arch Linux по умолчанию, они даже не установлены. Это означает, что вы не тратите ресурсы на дополнительные системные процессы. Вы также экономите пропускную способность интернета, не загружая обновления кода, которые не нужны.</p>
+<h4 id="3-arch-linux-хорош-технически">3. Arch Linux хорош технически</h4>
+<p>Многие дистрибутивы Linux представляют собой бесплатные и простые в использовании альтернативы Windows и macOS. Они хотят привлечь студентов, разработчиков и обычных пользователей. В результате они не выделяют многие “гайки и болты”, которые заставляют систему работать. Они не обязательно скрывают эту информацию, но вы должны знать, где искать и что искать.</p>
+<p>Arch не пытается представить себя чем-то другим, кроме набора программ, которые вы можете собрать, чтобы сделать функциональный компьютер. Хотите узнать, какие конкретные пакеты получают обновления или возникают проблемы? Arch размещает эту информацию на главной странице своего сайта. Каждая ссылка, по которой вы нажимаете, только углубляет техническую информацию.</p>
+<h4 id="4-подождите-пока-вы-не-попробуете-pacman-в-arch-linux">4. Подождите, пока вы не попробуете Pacman в Arch Linux</h4>
+<p>Pacman – это то, что вы используете для установки пакетов в Arch. Это то, что apt для Ubuntu, а для Fedora dnf. За исключением того, что в отличие от этих дистрибутивов, Arch не изо всех сил пытается навязать графическую альтернативу командной строке.</p>
+<p>Одним из преимуществ Pacman является то, что вам не нужно много печатать. Команда для установки определенного пакета:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">pacman -S package-name
+</code></pre></div><p>Хотите загрузить последние обновления для всей вашей системы?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">pacman -Syu
+</code></pre></div><p>Какой менеджер пакетов вы предпочитаете, зависит от вашего вкуса. Но вы можете обнаружить, что Pacman вам нравится.</p>
+<h4 id="5-aur--пользовательский-репозиторий-arch-linux">5. AUR – пользовательский репозиторий Arch Linux</h4>
+<p>Arch User Repository представляет собой набор программного обеспечения от членов сообщества, которые Arch еще сам не поддерживает. Вместо того, чтобы загружать исходные файлы приложения самостоятельно и пытаться выяснить, как все работает, AUR выполняет тяжелую работу. Есть хороший шанс, что если вы хотите запустить программу для Linux, которой нет в репозиториях Arch, она находится в AUR.</p>
+<p>Использование AUR не сразу интуитивно понятно, но есть способы упростить процесс. Такой инструмент, как Yay, может помочь вам в командной строке, а Octopi (KDE), Pamac (Gnome) предоставляет графический интерфейс, который выполняет фоновую работу за вас.</p>
+<h4 id="6-arch-wiki--лучшее-из-всех">6. Arch Wiki – лучшее из всех</h4>
+<p>В настоящее время я использую дистрибутив, созданный на основе Arch Linux, но даже когда у меня его нет, у меня все еще есть много причин, чтобы посетить Arch Wiki. Независимо от того, какой дистрибутив Linux вы используете, Arch Wiki – это клад c информацией.</p>
+<p>Поскольку Arch использует те же компоненты, что и большинство других дистрибутивов Linux, руководства содержащиеся на этом сайте, актуальны далеко за пределами экосистемы Arch. Если вы не уверены, какое программное обеспечение установить на свой компьютер, ознакомьтесь с описаниями, представленными здесь. Следуйте инструкциям, прочитайте рекомендации и обратите внимание на ошибки.</p>
+<p>Могут быть некоторые различия в том, как ваш дистрибутив и Arch делают разные вещи, но сайт все равно может указывать вам правильное направление.</p>
+<h4 id="7-стабильность-и-надежность">7. Стабильность и надежность</h4>
+<p>Метод обновления Arch Linux — плавающий релиз, благодаря чему не нужно беспокоиться о переустановке системы для получения новой версии дистрибутива, как пользователям других дистрибутивов. Поскольку его базовая система всегда обновлена с учетом последних исправлений и новых функций, и вам не нужно беспокоиться о том, когда устанавливать обновление системы и сколько времени оно займет.</p>
+<p>Кроме того, каждое обновление совместимо с вашей системой, поэтому не нужно опасаться, что какое то обновление что-то сломает, и это делает Arch Linux одним из самых стабильных и надежных дистрибутивов. (Если обновляться не раз в пол года).</p>
+<h4 id="8-arch-имеет-меньше-корпоративного-влияния">8. Arch имеет меньше корпоративного влияния</h4>
+<p>Многие люди используют Linux, потому что они не хотят, чтобы компания определяла, что они могут делать на своем компьютере. Независимо от того, какую версию Linux вы используете, коммерческое влияние на работу вашего ПК будет меньше, чем на Windows или macOS. Но, в конце концов, такие дистрибутивы, как Ubuntu, Fedora и openSUSE, по-прежнему связаны с корпоративным спонсором.</p>
+<p>Если вы используете дистрибутив, основанный на Ubuntu, на ваш рабочий стол по-прежнему влияют решения, которые принимает Canonical. Подобное влияние гораздо меньше в случае с Fedora и openSUSE. Но если вам нужен еще больший разрыв, вам нужен дистрибутив только для сообщества, такой как Arch.</p>
+<h4 id="9-идеальная-учебная-база">9. Идеальная учебная база</h4>
+<p>Arch Linux - это идеальная учебная платформа для всех, кто хочет узнать, как работает Linux, поскольку требует внимания к документации при его использовании.</p>
+<p>Конечно, вы можете решить искать быстрые решения и двигаться дальше в своей жизни, но если вы хотите выяснить причину проблем, а также способы их устранения, то Arch Linux и его огромная база знаний хорошая отправная точка.</p>
+<h4 id="10-сообщество-arch-linux">10. Сообщество Arch Linux</h4>
+<p>Помимо Arch Wiki, Arch Linux имеет обширное сообщество пользователей, которое добровольно готово предложить помощь всем, кто интересуется изучением Linux, особенно с использованием Arch Linux или любого из его производных дистрибутивов.</p>
+<p>Они также посвящены содействию успеху Arch Linux и простоте использования, возьмите Arch User Repository для примера. Хотя, даже если вы застряли в вики, вы в надежных руках.</p>
+<h4 id="что-можно-получить-после-настройки">Что можно получить после настройки:</h4>
+<p>
+    <img src="/img/gallery/1.jpg"  alt="KDE"  class="center"  style="border-radius: 8px;"  />
+
+
+
+    <img src="/img/gallery/2.png"  alt="KDE"  class="center"  style="border-radius: 8px;"  />
+
+
+
+    <img src="/img/gallery/3.png"  alt="KDE"  class="center"  style="border-radius: 8px;"  />
+
+
+
+    <img src="/img/gallery/4.png"  alt="KDE"  class="center"  style="border-radius: 8px;"  />
+
+
+
+    <img src="/img/gallery/5.png"  alt="KDE"  class="center"  style="border-radius: 8px;"  />
+
+</p>
+<h2 id="так-стоит-ли-мне-устанавливать-arch">Так стоит ли мне устанавливать Arch?</h2>
+<p>Это вам решать. Я всего лишь показал вам некоторые из многих преимуществ Arch. Почему бы вам не взять дистрибутив Arch Linux или более легкую альтернативу и попробовать его сейчас? Если вы обнаружите, что Arch Linux по-прежнему не дает вам достаточного контроля, вы всегда можете попробовать Gentoo:).</p>
+<h4 id="использовались-следующие-источники">Использовались следующие источники:</h4>
+<ul>
+<li><a href="https://losst.ru/10-prichin-ispolzovat-arch-linux">10 причин использовать Arch Linux</a></li>
+<li><a href="https://komyounity.com/stoit-li-ustanavlivat-arch-linux/">Стоит ли устанавливать Arch Linux? 10 причин</a></li>
+<li><a href="https://www.reddit.com/r/unixporn">UnixPorn</a></li>
+</ul>
+]]></content></item><item><title>Установка ArchLinux BTRFS + UEFI</title><link>https://th3fox.xyz/posts/2022/02/%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-archlinux-btrfs-uefi/</link><pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate><guid>https://th3fox.xyz/posts/2022/02/%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-archlinux-btrfs-uefi/</guid><description>Введение BTRFS (B-Tree Filesystem) — файловая система для Unix-подобных операционных систем, основанная на технике «Copy on Write» (CoW), призванная обеспечить легкость масштабирования файловой системы, высокую степень надежности и сохранности данных, гибкость настроек и легкость администрирования, сохраняя при этом высокую скорость работы.
+Основные возможности btrfs: Максимальный размер файла 2^64 байт Динамическая таблица inode Дедупликация данных Эффективное хранение файлов как очень малых, так и очень больших размеров Создание сабвольюмов и снапшотов Квоты на размеры сабвольюмов Контрольные суммы для данных и метаданных Возможность объединить несколько накопителей в единую файловую систему Создание RAID конфигурации на уровне файловой системы Сжатие данных Дефрагментация данных на лету Или если говорить вкратце BTRFS - Т1000 из мира файловых систем.</description><content type="html"><![CDATA[<h2 id="введение">Введение</h2>
+<p>BTRFS (B-Tree Filesystem) — файловая система для Unix-подобных операционных систем, основанная на технике «Copy on Write» (CoW), призванная обеспечить легкость масштабирования файловой системы, высокую степень надежности и сохранности данных, гибкость настроек и легкость администрирования, сохраняя при этом высокую скорость работы.</p>
+<h3 id="основные-возможности-btrfs">Основные возможности btrfs:</h3>
+<ul>
+<li>Максимальный размер файла 2^64 байт</li>
+<li>Динамическая таблица inode</li>
+<li>Дедупликация данных</li>
+<li>Эффективное хранение файлов как очень малых, так и очень больших размеров</li>
+<li>Создание сабвольюмов и снапшотов</li>
+<li>Квоты на размеры сабвольюмов</li>
+<li>Контрольные суммы для данных и метаданных</li>
+<li>Возможность объединить несколько накопителей в единую файловую систему</li>
+<li>Создание RAID конфигурации на уровне файловой системы</li>
+<li>Сжатие данных</li>
+<li>Дефрагментация данных на лету</li>
+</ul>
+<h4 id="или-если-говорить-вкратце">Или если говорить вкратце</h4>
+<p>BTRFS - Т1000 из мира файловых систем. Является наследником идей EXT2-3, и прекрасно подходит для SSD носителей, ибо имеет модули автодетекта, что позволяет не сильно париться с настройкой TRIM и флагов монтирования. Скорость чтения сопоставима, а иногда (Особенно при высоких нагрузках) превышают показатели EXT4. Идеальный выбор для игровой/домашней системы на базе Linux.</p>
+<h2 id="подготовка-к-установке">Подготовка к установке</h2>
+<p>Для начала нам нужно скачать сам образ. Для этого перейдем на официальный <a href="https://archlinux.org/">сайт</a> ArchLinux и скачаем образ с ближайшего к вам зеркала.
+
+    <img src="/img/gallery/guide/1.png"  alt="ArchLinux Download"  class="center"  style="border-radius: 8px;"  />
+
+
+
+    <img src="/img/gallery/guide/2.png"  alt="ArchLinux Mirror"  class="center"  style="border-radius: 8px; margin-top: 4px"  />
+
+
+Далее, нужно записать данный образ на флешку и для этого советую использовать <a href="https://www.balena.io/etcher/">Balena Etcher</a></p>
+<h2 id="установка">Установка</h2>
+<p>Подключаем вашу флешку к компьютеру и грузимся с нее.
+
+    <img src="/img/gallery/guide/3.png"  alt="ArchLinux Download"  class="center"  style="border-radius: 8px;"  />
+
+
+Выбираем первую строку и жмём Enter.</p>
+<h4 id="подключение-к-интернету">Подключение к интернету</h4>
+<p>Если у вас проводное соединение, то делать ничего не нужно, но если вы хотите подключиться через WiFi, то вам нужно использовать следующие комманды:
+Для того чтобы узнать имя вашего устройства:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">iwctl device list
+</code></pre></div><p>Чтобы просканировать сеть, где <code>wlan0</code> - имя вашего устройства:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">iwctl station wlan0 scan
+</code></pre></div><p>Чтобы вывести список доступный сетей(точек):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">iwctl station wlan0 get-networks
+</code></pre></div><p>Подключение к вашей точке доступа:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">iwctl station wlan0 connect <span style="color:#e6db74">&#34;Имя вашей точки&#34;</span> 
+</code></pre></div><p>Далее, нужно проверить наше подключение:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">ping -c <span style="color:#ae81ff">3</span> ya.ru 
+</code></pre></div><p>Если пинг идет, то все хорошо, идем дальше.</p>
+<h4 id="разделы-диска">Разделы диска</h4>
+<p>Далее, нам нужна разбить наш диск на разделы, но для начала нам нужно узнать имя самого диска:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">fdisk -l
+</code></pre></div><p>
+    <img src="/img/gallery/guide/4.png"  alt="ArchLinux Download"  class="center"  style="border-radius: 8px;"  />
+
+
+Время форматировать наш диск. Для этого введем следующее:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">gdisk /dev/<span style="color:#e6db74">&#34;имя вашего диска&#34;</span>
+</code></pre></div><p>У меня это <code>/dev/sda</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">gdisk /dev/sda
+</code></pre></div><p>Для перехода в экспертный режим введите:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">X
+</code></pre></div><p>Затем для удаления GPT введите:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">Z
+</code></pre></div><p>Дважды согласитесь, чтобы полностью очистить диск.
+
+    <img src="/img/gallery/guide/5.jpg"  alt="ArchLinux Download"  class="center"  style="border-radius: 8px;"  />
+
+
+Можно ещё раз проверить вывод команды, чтобы убедиться, что изменения сохранены:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">fdisk -l
+</code></pre></div><p>
+    <img src="/img/gallery/guide/6.jpg"  alt="ArchLinux Download"  class="center"  style="border-radius: 8px;"  />
+
+
+Время размечать наш диск. Используем команду <code>cfdisk</code> для этого и выбираем <code>gpt</code> формат:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">cfdisk /dev/sda
+</code></pre></div>
+    <img src="/img/gallery/guide/7.png"  alt="ArchLinux Download"  class="center"  style="border-radius: 8px;"  />
+
+
+<blockquote>
+<p><strong>Напомню, что вместо <code>sda</code> вы пишите имя своего диска</strong></p>
+</blockquote>
+<p>Используя стрелочки создаём 2 раздела на диске:</p>
+<ul>
+<li><code>/dev/sda1</code> размером 512M места под UEFI</li>
+<li><code>/dev/sda2</code> все остальное оставшееся место.
+Нажимаем <code>New</code> и устанавливаем размер равный 512M и жмем <code>Enter</code>
+Указываем тип:
+
+    <img src="/img/gallery/guide/8.jpg"  alt="ArchLinux Download"  class="center"  style="border-radius: 8px;"  />
+
+
+Нам нужно выбрать EFI System:
+
+    <img src="/img/gallery/guide/9.jpg"  alt="ArchLinux Download"  class="center"  style="border-radius: 8px;"  />
+
+
+Переходим к оставшейся свободной области (стрелочка вниз), опять нажимаем <code>New</code>, выбираем весь незанятый размер, в качестве типа ставим <code>Linux root (x86-64)</code>:
+
+    <img src="/img/gallery/guide/10.jpg"  alt="ArchLinux Download"  class="center"  style="border-radius: 8px;"  />
+
+
+Теперь выбираем Write, чтобы записать сделанные изменения.
+Пишем <code>yes</code> и выходим:
+
+    <img src="/img/gallery/guide/11.jpg"  alt="ArchLinux Download"  class="center"  style="border-radius: 8px;"  />
+
+
+Форматируем наши разделы:</li>
+</ul>
+<ol>
+<li>Форматируем тот раздел, который мы выделили под UEFI:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">mkfs.fat -F32 /dev/sda1
+</code></pre></div><ol start="2">
+<li>Форматируем тот раздел, которому мы выделили все оставшееся место:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">mkfs.btrfs -f /dev/sda2
+</code></pre></div><p>Теперь монтируем второй раздей для создание подразделов:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">mount /dev/sda2 /mnt
+</code></pre></div><p>Приступим к созданию подразделов:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">btrfs su cr /mnt/@
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">btrfs su cr /mnt/@home
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">btrfs su cr /mnt/@root
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">btrfs su cr /mnt/@srv
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">btrfs su cr /mnt/@log
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">btrfs su cr /mnt/@cache
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">btrfs su cr /mnt/@tmp
+</code></pre></div><p>Посмотрим созданные подразделы:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">btrfs su li /mnt
+</code></pre></div><p>
+    <img src="/img/gallery/guide/12.png"  alt="ArchLinux Download"  class="center"  style="border-radius: 8px;"  />
+
+
+Теперь отмонтируеим диск:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">umount /mnt
+</code></pre></div><p>Теперь создадим папки для монтирования подразделов:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">mkdir -p /mnt/<span style="color:#f92672">{</span>boot,home,root,srv,var/log,var/cache,tmp<span style="color:#f92672">}</span>
+</code></pre></div><p>Начнем сам процесс монтирования:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">mount /dev/sda1 /mnt/boot
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">mount -o subvol<span style="color:#f92672">=</span>@,defaults,noatime,compress<span style="color:#f92672">=</span>zstd:3 /dev/sda2 /mnt
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">mount -o subvol<span style="color:#f92672">=</span>@home,defaults,noatime,compress<span style="color:#f92672">=</span>zstd:3 /dev/sda2 /mnt/home
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">mount -o subvol<span style="color:#f92672">=</span>@root,defaults,noatime,compress<span style="color:#f92672">=</span>zstd:3 /dev/sda2 /mnt/root
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">mount -o subvol<span style="color:#f92672">=</span>srv,defaults,noatime,compress<span style="color:#f92672">=</span>zstd:3 /dev/sda2 /mnt/srv
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">mount -o subvol<span style="color:#f92672">=</span>@log,defaults,noatime,compress<span style="color:#f92672">=</span>zstd:3 /dev/sda2 /mnt/var/log
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">mount -o subvol<span style="color:#f92672">=</span>@cache,defaults,noatime,compress<span style="color:#f92672">=</span>zstd:3 /dev/sda2 /mnt/var/cache
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">mount -o subvol<span style="color:#f92672">=</span>@tmp,defaults,noatime,compress<span style="color:#f92672">=</span>zstd:3 /dev/sda2 /mnt/tmp
+</code></pre></div><h4 id="установка-1">Установка</h4>
+<p>Начинается самая долгая часть, потому что нужно будет много скачать. Устанавливаем все основные пакеты.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">pacstrap /mnt base base-devel linux linux-firmware linux-headers btrfs-progs ntfs-3g exfat-utils iw dialog wpa_supplicant nano vim wget zsh intel-ucode
+</code></pre></div><p><code>intel-ucode</code> заменить на <code>amd-ucode</code>, если у вас процессор AMD.
+После завершения установки пакетов создадим  fstab файл:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</code></pre></div><h4 id="настройка-установленной-системы">Настройка установленной системы</h4>
+<p>Теперь воспользуемся командой arch-chroot, которая позволяет временно подменить корневой каталог на любой другой, в котором есть структура корневой файловой системы Linux. При этом программы, которые мы оттуда запустим, не будут знать о том, что снаружи ещё что-то существует. Мы практически окажемся в нашей новой системе с правами администратора:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">arch-chroot /mnt
+</code></pre></div><p>Настраиваем дату и и время:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+</code></pre></div><p>Где <code>Europe/Moscow</code> - ваша временная зона.
+Чтобы увидеть все временные зоны:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">ls /usr/share/zoneinfo
+</code></pre></div><p>Чтобы увидеть подкатегории:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">ls /usr/share/zoneinfo/Europe
+</code></pre></div><p>Включаем использование systemd-timesyncd для синхронизации времени:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">timedatectl set-ntp true
+</code></pre></div><p>Устанавливаем аппаратные часы на UTC:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">hwclock --systohc --utc
+</code></pre></div><p>Установим русский язык. В файле locale.gen нам нужно раскомментировать две строки, для этого:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">nano /etc/locale.gen
+</code></pre></div><p>Ищем там и раскомментируем строки: <code>en_US.UTF-8 UTF-8</code>
+<code>ru_RU.UTF-8 UTF-8</code>
+После этого выполняем:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">locale-gen
+</code></pre></div><p>Создадим locale.conf:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">nano /etc/locale.conf
+</code></pre></div><p>И туда впишем:</p>
+<blockquote>
+<p>LANG=ru_RU.UTF-8</p>
+</blockquote>
+<p>Далее, настроим язык консоли:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">nano /etc/vconsole.conf
+</code></pre></div><p>И туда впишем следующее:</p>
+<blockquote>
+<p>KEYMAP=ru<br>
+FONT=cyr-sun16</p>
+</blockquote>
+<p>Зададим имя нашему ПК:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">nano /etc/hostname 
+</code></pre></div><p>и туда вписываем любое имя:</p>
+<blockquote>
+<p>CyberNet</p>
+</blockquote>
+<p>Установим сетевой менеджер:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">pacman -S networkmanager
+</code></pre></div><p>И включим его:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">systemctl enable NetworkManager
+</code></pre></div><p>Задададим пароль на рут:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">passwd
+</code></pre></div><p>Далее вводим пароль.
+Установим загрузчик:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">bootctl install
+</code></pre></div><p>Редактируем содержимое файла:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">nano /boot/loader/loader.conf
+</code></pre></div><p>Удалите все то, что там есть и впишите туда:</p>
+<blockquote>
+<p>default  arch</p>
+</blockquote>
+<p>Создайте конфигурационный файл для добавления пункта Arch Linux в менеджер systemd-boot:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">nano /boot/loader/entries/arch.conf
+</code></pre></div><p>Содержимое файла должно быть следующим:</p>
+<blockquote>
+<p>title  ArchLinux<br>
+linux  /vmlinuz-linux<br>
+initrd  /intel-ucode.img<br>
+initrd  /initramfs-linux.img<br>
+options  root=/dev/sda2 rootflags=subvol=@ rw quiet</p>
+</blockquote>
+<blockquote>
+<p><strong>Обратите внимание на /dev/sda2 — это путь до моего диска с системой, замените на свой.</strong>
+Выйдем из chroot и перезагрузимся:</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">exit  
+reboot
+</code></pre></div><h4 id="создание-пользователя">Создание пользователя</h4>
+<p>Захдим под root и создаем пользователя:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">useradd -m -g users -G audio,video,network,wheel,storage,rfkill -s /bin/zsh th3_fox
+</code></pre></div><blockquote>
+<p><strong>th3_fox - меняете на свое имя пользователя</strong></p>
+</blockquote>
+<p>Задаем для него пароль:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">passwd th3_fox
+</code></pre></div><p>Чтобы пользователи из группы wheel могли выполнять команды с sudo, выполним следующее:
+В файле <code>/etc/sudoers</code> найдем и раскомментируем строку</p>
+<blockquote>
+<p>%wheel ALL=(ALL) ALL</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">nano /etc/sudoers
+</code></pre></div><p>Далее, просто выходим из рут и заходим уже под нашим пользователем.</p>
+<h2 id="итог">Итог</h2>
+<p>Вот и все, вы подошли к завершению данного мануала и успешно установили ArchLinux на свой ПК.<br>
+В следующем руководстве, мы будем устанавливать графическое окружение рабочего стола.</p>
+]]></content></item></channel></rss>
